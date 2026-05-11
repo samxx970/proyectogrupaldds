@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>CyberSec News - Políticas</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+
+            <label for="ckbox" class="drawer" aria-label="Abrir menú">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <h1>Noticias de Ciberseguridad</h1>
+
+            <ul class="menu-box">
+                <!-- Botón cerrar (solo visible en móvil) -->
+                <li class="menu-close-item">
+                    <label for="ckbox" class="menu-close-btn">
+                        <i class="fa fa-times"></i> Cerrar menú
+                    </label>
+                </li>
+
+                <li><a href="index.html" class="fa fa-home"> Inicio</a></li>
+
+                <li class="desplegable">
+                    <a href="noticias.html" class="fa-solid fa-newspaper">Noticias</a>
+                </li>
+
+                <li><a href="servicios.html" class="fa-solid fa-satellite-dish"> Servicios</a></li>
+
+                <li class="desplegable">
+                    <input type="checkbox" id="drop-ayuda" class="drop-toggle"><label for="drop-ayuda" class="fa-solid fa-angle-down nav-label"> Otro</label>
+                    <ul class="submenu">
+                        <li><a href="contacto.html" class="fa">Incidencias</a></li>
+                        <li><a href="politicas.html" class="fa">Politicas</a></li>
+                        <li><a href="Quienesasomos.html" class="fa">Quienes Somos</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <label for="ckbox" class="nav-overlay" aria-hidden="true"></label>
+        </nav>
+    </header>
+
+    <main class="contenedor-legal">
+        <section class="contenido-legal">
+
+            <div id="aviso-legal">
+                <span class="badge">LSSI-CE</span>
+                <h2>1. Aviso Legal</h2>
+                <p>En cumplimiento del artículo 10 de la Ley 34/2002, de 11 de julio, de Servicios de la Sociedad de
+                    la Información y Comercio Electrónico (LSSI-CE), se exponen los siguientes datos identificativos:</p>
+                <div class="legal-box">
+                    <ul>
+                        <li><strong>Titular:</strong> Samuel Lucas, Daniel Orlin &amp; Daniel Coca</li>
+                        <li><strong>Proyecto:</strong> CyberSec News (ASIR 1º)</li>
+                        <li><strong>Contacto:</strong> admin@cybersecnews</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="privacidad" style="margin-top: 50px;">
+                <span class="badge">RGPD / LOPDGDD</span>
+                <h2>2. Política de Privacidad</h2>
+                <p>De acuerdo con el Reglamento (UE) 2016/679 (RGPD) y la Ley Orgánica 3/2018 (LOPDGDD), informamos
+                    de que los datos personales recogidos en esta web —incluyendo el correo electrónico facilitado para
+                    la suscripción a la newsletter— serán tratados exclusivamente con la finalidad de enviar información,
+                    alertas, guías y contenidos relacionados con la ciberseguridad.</p>
+                <p style="margin-top: 12px;">Los datos se almacenan de forma segura, aplicando medidas técnicas y
+                    organizativas destinadas a garantizar su confidencialidad e integridad. No se cederán a terceros
+                    salvo obligación legal o requerimiento judicial.</p>
+                <p style="margin-top: 12px;">El usuario puede ejercer en cualquier momento sus derechos de Acceso,
+                    Rectificación, Supresión, Limitación del tratamiento, Oposición y Portabilidad enviando una
+                    solicitud a los administradores del sitio. Asimismo, puede solicitar la baja de la newsletter
+                    mediante el enlace incluido en cada correo o contactando directamente con el equipo.</p>
+            </div>
+
+            <div id="cookies" style="margin-top: 50px;">
+                <span class="badge">Navegación</span>
+                <h2>3. Política de Cookies</h2>
+                <p>Este sitio web utiliza cookies propias y de terceros con el objetivo de mejorar la experiencia de
+                    navegación y garantizar el correcto funcionamiento de sus herramientas.</p>
+                <p style="margin-top: 12px;"><strong>Cookies técnicas:</strong> necesarias para que el menú, los
+                    formularios y las funciones interactivas operen correctamente. Sin ellas, algunas secciones podrían
+                    no mostrarse o funcionar de forma inestable.</p>
+                <p style="margin-top: 12px;"><strong>Cookies de análisis:</strong> empleadas para obtener estadísticas
+                    anónimas sobre el uso de la web. Esta información nos permite mejorar los contenidos y optimizar la
+                    experiencia del usuario.</p>
+                <p style="margin-top: 12px;">El usuario puede configurar su navegador para rechazar todas las cookies
+                    o recibir un aviso antes de su instalación. Desactivar las cookies técnicas puede afectar al
+                    funcionamiento de ciertas funcionalidades esenciales.</p>
+            </div>
+
+            <div id="terminos" style="margin-top: 50px;">
+                <span class="badge">Seguridad</span>
+                <h2>4. Términos y Condiciones</h2>
+                <p>El uso del <strong>Comprobador de Contraseñas</strong> y el <strong>Analizador de URLs</strong>
+                    es informativo. El usuario acepta que el análisis se realiza de forma local y CyberSec News no se
+                    hace responsable del uso de las claves externas al entorno de esta web.</p>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&#169; Web Original de noticias de Ciberseguridad diseñada por Samuel Lucas, Daniel Orlin &amp; Daniel Coca</p>
+    </footer>
+</body>
+
+</html>

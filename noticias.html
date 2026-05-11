@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Web iconos: https://fontawesome.com/v6/icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>CyberSec News</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+     <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+            <h1>Noticias de Ciberseguridad</h1>
+            <ul class="menu-box">
+                <li><a href="index.html" class="fa fa-home">Inicio</a></li>
+
+                <li class="desplegable">
+                    <a href="noticias.html" class="fa-solid fa-newspaper">Noticias</a>
+                </li>
+
+                <li><a href="servicios.html" class="fa-solid fa-satellite-dish">Servicios</a></li>
+
+                <li class="desplegable">
+                    <input type="checkbox" id="drop-ayuda" class="drop-toggle"><label for="drop-ayuda" class="fa-solid fa-angle-down nav-label"> Otro</label>
+                    <ul class="submenu">
+                        <li><a href="contacto.html" class="fa">Inicidencias</a></li>
+                        <li><a href="politicas.html" class="fa">Politicas</a></li>
+                        <li><a href="contacto.html" class="fa">Quienes Somos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <section class="noticia-explicada-seccion">
+
+    <div class="noticia-explicada-portada">
+        <img src="img/noticia 3.jpg" alt="Noticia principal explicada">
+        <div class="noticia-explicada-texto">
+            <h2 class="noticia-explicada-titulo">Ataque de ransomware paraliza varias empresas españolas</h2>
+            <p class="noticia-explicada-resumen">
+                Un nuevo grupo de ciberdelincuentes ha lanzado una campaña masiva que cifra los datos de servidores
+                empresariales y exige pagos en criptomonedas.
+            </p>
+            <p class="noticia-explicada-autor">Por Equipo CyberSec</p>
+        </div>
+    </div>
+
+    <div class="noticia-explicada-cuerpo">
+        <h3>Detalles del ataque</h3>
+
+        <p>
+            Durante la madrugada del pasado jueves, varias empresas españolas reportaron la caída total de sus sistemas
+            internos. Los analistas confirmaron que se trataba de un ataque de ransomware que aprovechaba
+            vulnerabilidades sin parchear en servidores expuestos a Internet.
+        </p>
+
+        <p>
+            El malware cifra todos los archivos críticos y deja una nota de rescate exigiendo pagos en Bitcoin.
+            Las autoridades recomiendan no pagar y contactar con el INCIBE para recibir asistencia.
+        </p>
+
+        <p>
+            Expertos señalan que este tipo de ataques se ha incrementado un 40% en el último año, afectando tanto
+            a pequeñas empresas como a grandes corporaciones.
+        </p>
+    </div>
+    
+    <div class="noticia-explicada-cuerpo">
+    <h3>Detalles técnicos </h3>
+    <p>
+        El vector de entrada principal fue identificado como una **vulnerabilidad de ejecución remota de código (RCE)** en servicios de acceso remoto mal configurados. Los atacantes utilizaron técnicas de *brute force* sobre protocolos RDP (Remote Desktop Protocol) que carecían de autenticación de doble factor (2FA), logrando así escalar privilegios dentro de la infraestructura local.
+    </p>
+
+    <h3>Instituciones y sectores afectados</h3>
+    <p>
+        Aunque el ataque fue masivo, el impacto ha sido crítico en **ayuntamientos de tamaño medio, centros de salud regionales y servicios de logística**, cuyas bases de datos SQL fueron completamente cifradas. El grupo detrás del ataque, identificado preliminarmente como "ShadowByte", ha filtrado en la *Dark Web* una muestra de 5GB con datos sensibles como medida de presión para el pago del rescate.
+    </p>
+
+    <h3>Recomendaciones de Seguridad </h3>
+    <p>
+        Desde el INCIBE se insta a las organizaciones a realizar auditorías de seguridad urgentes. Como medidas de mitigación inmediata para administradores de sistemas (ASIR), se recomienda:
+    </p>
+    <ul>
+        <li><i class="fa fa-check-circle"></i> Implementar políticas de **Backups 3-2-1** con copias desconectadas de la red.</li>
+        <li><i class="fa fa-check-circle"></i> Cerrar puertos innecesarios y filtrar el tráfico mediante Firewalls (NGFW).</li>
+        <li><i class="fa fa-check-circle"></i> Aplicar parches de seguridad críticos en sistemas operativos Windows Server y distribuciones Linux.</li>
+    </ul>
+</div>
+</section>
+    <footer>
+        <p>&#169; Web Original de noticias de Ciberseguridad diseñada por Samuel Lucas, Daniel Orlin & Daniel Coca</p>
+    </footer>
+</body>
+
+</html>

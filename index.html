@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>CyberSec News</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+
+            <label for="ckbox" class="drawer" aria-label="Abrir menú">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <h1>Noticias de Ciberseguridad</h1>
+
+            <ul class="menu-box">
+                <!-- Botón cerrar (solo visible en móvil) -->
+                <li class="menu-close-item">
+                    <label for="ckbox" class="menu-close-btn">
+                        <i class="fa fa-times"></i> Cerrar menú
+                    </label>
+                </li>
+
+                <li><a href="index.html" class="fa fa-home"> Inicio</a></li>
+
+                <li class="desplegable">
+                    <a href="noticias.html" class="fa-solid fa-newspaper">Noticias</a>
+                </li>
+
+                <li><a href="servicios.html" class="fa-solid fa-satellite-dish"> Servicios</a></li>
+                
+
+                <li class="desplegable">
+                    <input type="checkbox" id="drop-ayuda" class="drop-toggle"><label for="drop-ayuda" class="fa-solid fa-angle-down nav-label"> Otro</label>
+                    <ul class="submenu">
+                        <li><a href="contacto.html" class="fa">Inicidencias</a></li>
+                        <li><a href="politicas.html" class="fa">Politicas</a></li>
+                        <li><a href="contacto.html" class="fa">Quienes Somos</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Overlay: clic fuera del panel lo cierra -->
+            <label for="ckbox" class="nav-overlay" aria-hidden="true"></label>
+        </nav>
+    </header>
+
+    <section class="noticias-seccion">
+        <div class="noticias-grid">
+            <!-- NOTICIA GRANDE (izquierda) -->
+            <div class="noticia-grande">
+                <img src="img/Hackeo Canvas.jpeg" alt="Hackeo a Canvas de Instructure">
+                <div class="noticia-grande-texto">
+                    <span class="etiquetaind">Tecnología, Seguridad</span>
+                    <h2 class="titulo-grande">La plataforma de Instructure es vulnerada</h2>
+                    <p class="resumen-grande">Posiblemente el miércoles 6 de mayo se accedió a la plataforma y se
+                        infectó ese mismo día. El jueves 7, se tumbaron los servicios en plena época de exámenes.
+                        Instructure habría pagado el rescate de los datos ante la criticidad del momento.
+                    </p>
+                    <span class="autor">Artículo escrito por: S4vitar</span>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA: 2 noticias pequeñas -->
+            <div class="noticias-derecha">
+
+                <div class="noticia-pequeña">
+                    <img src="img/Noticia2.jpg" alt="Hackeo a Ticket Master">
+                    <div class="noticia-pequeña-texto">
+                        <span class="etiquetaind">Hackeo a Ticket Master</span>
+                        <h3 class="titulo-pequeño">TicketMaster investiga una posible vulnerabilidad en sus sistemas.</h3>
+                    </div>
+                </div>
+
+                <div class="noticia-pequeña">
+                    <img src="img/Noticia3.jpg" alt="Ciberseguridad en el sector sanitario">
+                    <div class="noticia-pequeña-texto">
+                        <span class="etiquetaind">Ciberseguridad, Cyberattacks</span>
+                        <h3 class="titulo-pequeño">Advierten del peligro que tiene la digitalización del sector sanitario.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="formulariofondo">
+        <form class="formulario" method="post">
+            <h2 style="color: rgb(62, 62, 62); text-align: center;">
+                Recibe nuestra <b style="color: black;">Newsletter</b>
+            </h2>
+            <label class="campoform">*Nombre y Apellidos:<br>
+                <input type="text" class="entrada" required>
+            </label>
+            <br><br>
+            <label class="campoform">*Email:<br>
+                <input type="email" class="entrada" required>
+            </label>
+            <br><br>
+            <label class="campoform">*Empresa:<br>
+                <input type="text" class="entrada" required>
+            </label>
+            <br><br>
+            <label class="campoform">Cargo:</label><br>
+            <input list="Cargo" class="entrada" placeholder="Dirección General/CEO...">
+            <datalist id="Cargo">
+                <option value="Dirección General/CEO"></option>
+                <option value="Dirección de Marketing"></option>
+                <option value="Dirección Financiera"></option>
+                <option value="Dirección de Tecnología"></option>
+                <option value="Dirección de Ventas"></option>
+                <option value="Dirección Desarrollo de negocio"></option>
+                <option value="Dirección Comercial"></option>
+                <option value="Departamento Marketing"></option>
+                <option value="Departamento Ventas"></option>
+                <option value="Departamento Tecnología"></option>
+                <option value="Otro"></option>
+            </datalist>
+            <br><br>
+            <input type="checkbox" id="newsletter-check" required>
+            <label for="newsletter-check">
+                Acepto recibir la Newsletter y comunicaciones de CyberSec News conforme a su
+                <a href="politicas.html" target="_blank">Política de privacidad</a>.
+            </label>
+            <br><br>
+            <input type="submit" value="Enviar" class="botonform">
+        </form>
+    </section>
+
+    <footer>
+        <p>&#169; Web Original de noticias de Ciberseguridad by Samuel Lucas, Daniel Orlin &amp; Daniel Coca</p>
+    </footer>
+</body>
+
+</html>

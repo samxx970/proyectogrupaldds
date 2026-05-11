@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>CyberSec News - Reporte de Incidentes</title>
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="formulariofondo">
+    <header>
+        <nav>
+            <input type="checkbox" id="ckbox">
+            <label for="ckbox" class="drawer" aria-label="Abrir menú">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </label>
+
+            <h1>Noticias de Ciberseguridad</h1>
+
+            <ul class="menu-box">
+                <!-- Botón cerrar (solo visible en móvil) -->
+                <li class="menu-close-item">
+                    <label for="ckbox" class="menu-close-btn">
+                        <i class="fa fa-times"></i> Cerrar menú
+                    </label>
+                </li>
+
+                <li><a href="index.html" class="fa fa-home"> Inicio</a></li>
+
+                <li class="desplegable">
+                    <a href="noticias.html" class="fa-solid fa-newspaper">Noticias</a>
+                </li>
+
+                <li><a href="servicios.html" class="fa-solid fa-satellite-dish"> Servicios</a></li>
+
+                <li class="desplegable">
+                    <input type="checkbox" id="drop-ayuda" class="drop-toggle"><label for="drop-ayuda" class="fa-solid fa-angle-down nav-label"> Otro</label>
+                    <ul class="submenu">
+                        <li><a href="contacto.html" class="fa">Contacto</a></li>
+                        <li><a href="politicas.html" class="fa">Politicas</a></li>
+                        <li><a href="Quienesasomos.html" class="fa">Quienes Somos</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <label for="ckbox" class="nav-overlay" aria-hidden="true"></label>
+        </nav>
+    </header>
+
+    <main>
+        <div class="reporte-container">
+            <h2>Reporte de Incidente de Seguridad</h2>
+            <form action="#" method="POST">
+
+                <fieldset>
+                    <legend>1. Información personal del informante </legend>
+
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre completo:</label>
+                        <input type="text" id="nombre" name="nombre" class="form-cajas" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="email">Correo electrónico corporativo:</label>
+                        <input type="email" id="email" name="email" class="form-cajas" placeholder="ejemplo@empresa.com" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="empresa">Empresa/Organización afectada:</label>
+                        <input type="text" id="empresa" name="empresa" class="form-cajas" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="rol">Rol en la empresa:</label>
+                        <select id="rol" name="rol" class="form-cajas">
+                            <option value="">No formo parte de la empresa</option>
+                            <option value="Administrador de TI">Administrador de TI</option>
+                            <option value="Oficial de Seguridad">Oficial de Seguridad (CISO/SecOps)</option>
+                            <option value="Directivo">Directivo</option>
+                            <option value="Empleado">Empleado general</option>
+                            <option value="Externo">Consultor / Externo</option>
+                        </select>
+                    </div>
+
+                    <div class="container-checkbox">
+                        <input type="checkbox" name="anonimo">
+                        <label>Deseo reportar este incidente de forma anónima</label>
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>2. Detalles del Incidente</legend>
+
+                    <div class="form-grupo">
+                        <label>Tipo de incidente (Seleccione todos los aplicables):</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="Phishing"> Phishing / Ingeniería Social</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="Ransomware"> Ransomware</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="DDoS"> Ataque DDoS</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="Fuga_datos"> Fuga de datos</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="Acceso_no_autorizado"> Acceso no autorizado</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="Malware"> Infección por Malware</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_incidente" value="Otro"> Otro</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="titulo_incidente">Título del incidente:</label>
+                        <input type="text" id="titulo_incidente" name="titulo_incidente" class="form-cajas" placeholder="Ej. Brecha de base de datos de clientes" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="fecha_deteccion">Fecha y Hora aproximada de detección:</label>
+                        <input type="datetime-local" id="fecha_deteccion" name="fecha_deteccion" class="form-cajas" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="fecha_inicio">Fecha y Hora aproximada de inicio del ataque:</label>
+                        <input type="datetime-local" id="fecha_inicio" name="fecha_inicio" class="form-cajas">
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>Nivel de severidad estimado:</label>
+                        <div class="radio-group">
+                            <label class="radio-item"><input type="radio" name="severidad" value="Bajo"> Bajo</label>
+                            <label class="radio-item"><input type="radio" name="severidad" value="Medio"> Medio</label>
+                            <label class="radio-item"><input type="radio" name="severidad" value="Alto"> Alto</label>
+                            <label class="radio-item"><input type="radio" name="severidad" value="Critico"> Crítico</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="descripcion">Descripción detallada (¿Qué sucedió?):</label>
+                        <textarea id="descripcion" name="descripcion" class="form-cajas" rows="5" required></textarea>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="como_detecto">¿Cómo se detectó?:</label>
+                        <input type="text" id="como_detecto" name="como_detecto" class="form-cajas" placeholder="Ej. Alerta del EDR, reporte de usuario, caída de servicio...">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>3. Detalles Técnicos y Afectación</legend>
+
+                    <div class="form-grupo">
+                        <label>Servicios/Sistemas afectados:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item"><input type="checkbox" name="sistemas" value="Servidores"> Servidores</label>
+                            <label class="checkbox-item"><input type="checkbox" name="sistemas" value="BD"> Base de datos</label>
+                            <label class="checkbox-item"><input type="checkbox" name="sistemas" value="Web"> Sitio Web</label>
+                            <label class="checkbox-item"><input type="checkbox" name="sistemas" value="Correo"> Correos Electrónicos</label>
+                            <label class="checkbox-item"><input type="checkbox" name="sistemas" value="Endpoints"> Endpoints/Equipos</label>
+                            <label class="checkbox-item"><input type="checkbox" name="sistemas" value="Redes"> Infraestructura de Red</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="iocs">IPs o dominios involucrados (IoCs):</label>
+                        <textarea id="iocs" name="iocs" class="form-cajas" rows="3" placeholder="Una por línea..."></textarea>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>¿Se ha filtrado información confidencial?</label>
+                        <div class="radio-group">
+                            <label class="radio-item"><input type="radio" name="filtracion" value="Si"> Sí</label>
+                            <label class="radio-item"><input type="radio" name="filtracion" value="No"> No</label>
+                            <label class="radio-item"><input type="radio" name="filtracion" value="No_seguro"> No estoy seguro</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>Tipo de información afectada:</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_info" value="PII"> PII (Datos Personales)</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_info" value="Financiera"> Información Financiera</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_info" value="Propiedad_Intelectual"> Propiedad Intelectual</label>
+                            <label class="checkbox-item"><input type="checkbox" name="tipo_info" value="Credenciales"> Credenciales / Passwords</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="usuarios_afectados">Número estimado de usuarios/clientes afectados:</label>
+                        <input type="number" id="usuarios_afectados" name="usuarios_afectados" class="form-cajas" min="0">
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>4. Acciones Tomadas y Evidencias</legend>
+
+                    <div class="form-grupo">
+                        <label for="mitigacion">Medidas inmediatas de mitigación (¿Qué hicieron para pararlo?):</label>
+                        <textarea id="mitigacion" name="mitigacion" class="form-cajas" rows="4"></textarea>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label>¿El incidente sigue activo?</label>
+                        <div class="radio-group">
+                            <label class="radio-item"><input type="radio" name="estado_incidente" value="Si"> Sí</label>
+                            <label class="radio-item"><input type="radio" name="estado_incidente" value="No"> No</label>
+                            <label class="radio-item"><input type="radio" name="estado_incidente" value="Controlado"> Bajo control</label>
+                        </div>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="evidencias">Adjuntar evidencias (Logs, Capturas, etc.):</label>
+                        <input type="file" id="evidencias" name="evidencias" class="form-cajas" accept=".log,.pdf,.jpg,.jpeg,.png,.pcap,.txt" multiple>
+                        <small style="color: #555; margin-top: 5px; display: block;">Formatos permitidos: .log, .pdf, .jpg, .pcap, .txt</small>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="hash_evidencia">Hash del archivo adjunto (SHA-256, opcional):</label>
+                        <input type="text" id="hash_evidencia" name="hash_evidencia" class="form-cajas">
+                    </div>
+                </fieldset>
+
+                <fieldset style="border-color: var(--secundary); background-color: #f0f4f8;">
+                    <legend style="background-color: var(--secundary);">5. Confirmación y Cierre</legend>
+
+                    <div class="container-checkbox">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <label for="terminos">
+                            Acepto los términos, condiciones y la política de privacidad de CyberSec News.
+                            <span style="color: red;">*</span>
+                        </label>
+                    </div>
+
+                    <div class="container-checkbox">
+                        <input type="checkbox" id="autoriza_publicacion" name="autoriza_publicacion">
+                        <label for="autoriza_publicacion">
+                            Autorizo la publicación de los detalles técnicos de este reporte con fines educativos
+                            e informativos (toda información personal y de la empresa será completamente
+                            <strong>anonimizada</strong>).
+                        </label>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-paper-plane"></i> Enviar Reporte de Incidente
+                </button>
+
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <p>&#169; Web Original de noticias de Ciberseguridad diseñada por Samuel Lucas, Daniel Orlin &amp; Daniel Coca</p>
+    </footer>
+</body>
+
+</html>
